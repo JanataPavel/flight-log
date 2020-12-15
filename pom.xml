@@ -25,6 +25,7 @@
         <apache.commons.csv.version>1.6</apache.commons.csv.version>
         <javax.activation.version>1.1.1</javax.activation.version>
         <sun.xml.bind.jaxb>2.2.7</sun.xml.bind.jaxb>
+        <commons-csv.version>1.8</commons-csv.version>
 	</properties>
 
     <modules>
@@ -39,6 +40,16 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>eu.profinit.education.flightlog</groupId>
+                <artifactId>domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.profinit.education.flightlog</groupId>
+                <artifactId>services</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>eu.profinit.education.flightlog</groupId>
                 <artifactId>rest</artifactId>
@@ -69,7 +80,17 @@
                 <artifactId>activation</artifactId>
                 <version>${javax.activation.version}</version>
             </dependency>
-            <!-- TODO 4.1: přidejte závislost na knihovně pro práci s CSV s verzí definovanou <properties> -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>${commons-csv.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.14</version>
+                <scope>provided</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
