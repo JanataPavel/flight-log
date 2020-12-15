@@ -41,11 +41,6 @@
         <dependencies>
             <dependency>
                 <groupId>eu.profinit.education.flightlog</groupId>
-                <artifactId>services</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.profinit.education.flightlog</groupId>
                 <artifactId>rest</artifactId>
                 <version>${project.version}</version>
             </dependency>
